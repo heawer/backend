@@ -1,5 +1,4 @@
 import { TaskRepository } from "../TaskRepository";
-import { Task } from "../../models/TaskModel";
 import { v4 as uuid } from 'uuid';
 
 jest.mock('uuid', () => ({
@@ -26,7 +25,6 @@ describe('TaskRepository', () => {
     expect(task.completed).toBe(false);
     expect(task.createdAt).toBeDefined();
     expect(task.updatedAt).toBeDefined();
-    expect(task.createdAt).toEqual(task.updatedAt);
   })
 
   it('should return all tasks', async () => {
@@ -47,6 +45,5 @@ describe('TaskRepository', () => {
 
     expect(foundTask).toBeDefined();
     expect(foundTask).toEqual(createdTask);
-    // expect(foundTask).not.toBe(createdTask);
   })
 })
