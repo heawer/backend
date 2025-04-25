@@ -1,8 +1,8 @@
 import express from 'express'
-import { v4 as uuid } from 'uuid' 
+import { v4 as uuid } from 'uuid'
+import { port } from './config'
 
 const app = express()
-const port = 3000
 
 const tasks = []
 
