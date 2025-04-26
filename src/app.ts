@@ -12,7 +12,7 @@ const taskRepository = new TaskRepository()
 const taskService = new TaskService(taskRepository)
 const taskController = new TaskController(taskService)
 
-app.delete("/tasks", taskController.deleteTask)
+app.delete("/tasks/:id", taskController.deleteTask)
 app.get("/tasks", taskController.getAllTasks)
 app.get("/tasks/:id", taskController.getTaskById)
 app.post("/tasks", taskController.createTask)
