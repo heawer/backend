@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "dev": "tsx watch src/app",
     "start": "tsx src/app",
     "test": "jest"
   },
